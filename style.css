@@ -9,6 +9,10 @@
     --footer-text: #8D8C8C;
 
 }
+html{
+    scroll-behavior: smooth;
+
+}
 
 .navbar .container .name {
     color: var(--color-primary);
@@ -17,6 +21,7 @@
 
 .navbar .container .collapse .navbar-nav .nav-link {
     padding: 10px;
+    margin: 10px;
     color: var(--font-color);
 }
 
@@ -106,50 +111,47 @@ section {
 #home{
     padding-top:200px  ;
 }
-
-.container .row .profile {
-    width: 100%;
-}
-
-.container .row .profile .text {
-    padding-left: 20px;
-    width: 50%;
-    float: left;
-    padding-right: 10px;
-    margin-top:70px ;
-}
-
-.container .row .profile .photo {
-    display: block;
-    white-space: nowrap;
-    float: right;
-    height: auto;
-    max-width: 100%;
-}
-
-.container .row .profile .text h2 {
-    font-weight: 700;
-}
-
-.container .row .profile .text p {
-    color: var(--text-color);
-    text-align: justify;
-
-}
-
-.container .row .profile .photo img {
-    float: right;
-    border-radius: 10px;
-    margin: 10px;
-    width: 280px;
-    margin: 20px;
-    max-width: 100%;
-    min-width: 100px;
-    height: auto;
+.home .row {
+    width: 80%;
     text-align: center;
+    align-content: center;
+    margin: 0 auto ;
+}
+ .home .row .text{
+     
+     text-align: justify;
+ }
+ .home .row .text h2{
+     font-size: 50px;
+     font-weight: 600;
+ }
+ .home .row .text p{
+     color: var(--text-color);
+     font-weight: 300;
+ }
+ .home .row .photo{
+     
+ }
+
+.home .row  .card .photo{
+    width: 400px;
+    height: 500px;
+    border: none;
+
+
+}
+.home .row  .card img{
+    width: 100%;
+	height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: none;
+    margin-top: -100px; 
+
 }
 
-.container .row .profile .text .btn_cv {
+
+.home .row .btn_cv {
     background-color: var(--color-primary);
     margin-top: 20px;
     border-radius: 30px;
@@ -167,7 +169,7 @@ section {
     text-decoration:none;
 }
 
-@media screen and (max-width:750px) {
+/* @media screen and (max-width:750px) {
     .container .row .profile .text {
         width: 100%;
     }
@@ -177,7 +179,7 @@ section {
         margin-right: auto;
         width: 50%;
     }
-}
+} */
 
 .services .headlines {
     text-align: center;
@@ -206,59 +208,46 @@ section {
 }
 
 .services .row {
-    padding: 40px;
-}
-
-.services .row .container {
-    background-color: #FAFAFD;
-    float: right;
-    padding: 50px;
-    margin: 20px;
-    /* height: 10cm; */
-    /* width: 10%; */
+    /* padding: 40px; */
+    width: 80%;
     text-align: center;
-    border-radius: 5px;
-    transition: top ease 0.5s;
-
+    align-content: center;
+    margin: 0 auto ;
 }
-
-.services .row .container h4 {
-    text-align: center;
-}
-.services .row .container img{
-    color: var(--color-primary);
-}
-
-.services .row .container .btn_read_more {
-    margin: 0 auto;
-}
-
-.services .row .container p {
-    text-align: center;
-    color: var(--text-color);
-}
-
-.services .row .container button {
+.services .row .col .card{
+    /* background-color: #FAFAFD; */
     background-color: var(--color-primary);
-    border-radius: 30px;
+    display: inline-flex;
+    border: none;
+    border-radius: 15px;
     color: var(--color-secondary);
-    width: 70%;
-    height: 40px;
+    margin-top: 30px;
+    width: 300px;
+    height: 350px;
+
+
+}
+.services .row .col .card h5{
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.services .row .col .card p{
+    font-weight: 200;
 }
 
-.services .row .container:hover {
+
+.services .row .col .card :hover {
     top: -20px;
 }
 
-.services .row .hr {
-    float: left;
-    /* clear: left; */
-    border-top: 4px solid;
-    position: relative;
-    border-color: var(--color-primary);
-    width: 30px;
-    height: 20px;
+@media screen and (min-width:320px) {
+    .portfolio .toppart .navbar a{
+        font-size: 13px;
+    }
 }
+
 
 .portfolio .toppart {
     background-color: var(--color-primary);
@@ -304,25 +293,30 @@ section {
 
 .portfolio .row {
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: space-around;
-    margin-left:20px;
     margin-top:50px ;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
 }
 
+.portfolio .row .col{
+    display: inline-block;
+}
 
 .portfolio .row .col .card {
+    display: flexbox;
 	width: 8cm;
 	height: 6cm;
 	border-radius: 15px;
 	padding: 1.5rem;
 	background: white;
 	position: relative;
-	display: flex;
 	align-items: flex-end;
     transition: 0.4s ease-out;
     text-align: center;
-	/* box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); */
+    margin-top:50px;
 }
 
 
@@ -372,9 +366,6 @@ section {
     margin: 0px;
     font-weight: 100;
     font-size: 92px;
-    /* padding-right: 90px; */
-    /* padding-right:60px ; */
-
     
 }
 
@@ -382,7 +373,6 @@ section {
 	letter-spacing: 1px;
     font-size: 20px;
     padding-right: 120px;
-
 
 }
 
@@ -401,12 +391,56 @@ section {
     padding-right: 168px;   
 }
 
-
 .portfolio .row .col .card .info a:hover {
     color:var(--color-secondary);
     text-decoration:none;
 
 }
+.certification .headlines{
+    text-align: center;
+}
+
+.certification .headlines hr {
+    color: var(--color-primary);
+    width: 60px;
+    position: relative;
+    border-top: 4px solid;
+    border-radius: 10px;
+}
+.certification .headlines h6 {
+    color: var(--color-primary);
+    font-weight: 300;
+}
+
+.certification .headlines h2 {
+    font-weight: 800;
+}
+
+.certification .row{
+    width:70% ;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
+
+}
+.certification .row .col .card{
+    display: inline-block;
+    margin-top: 50px;
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+
+}
+.certification .row .col .card .card-body .btn_download{
+    border-radius: 55px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.certification .row .col .card .card-body h5{
+    font-weight: 700;
+}
+
 
 .about .headlines {
     text-align: center;
@@ -427,6 +461,57 @@ section {
 
 .about .headlines h2 {
     font-weight: 800;
+}
+.about .container .row .profile{
+    text-align: left;
+}
+
+.about .container .row .profile .text h2 {
+    font-weight: 700;
+}
+
+.about .container .row .profile .text p {
+    color: var(--text-color);
+    text-align: justify;
+    
+
+}
+
+.about .container .row .profile .photo img {
+    float: right;
+    border-radius: 10px;
+    margin: 10px;
+    width: 280px;
+    margin: 20px;
+    max-width: 100%;
+    min-width: 100px;
+    height: auto;
+    text-align: center;
+}
+
+
+.about .container .row .profile {
+    width: 100%;
+}
+
+.about .container .row .profile .text {
+    padding-left: 20px;
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+    margin-top:70px ;
+}
+.about .container .row {
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
+}
+.about .container .row .profile .photo {
+    display: block;
+    white-space: nowrap;
+    float: right;
+    height: auto;
+    max-width: 100%;
 }
 
   .skill-bars .bar{
@@ -531,7 +616,7 @@ section {
   }
 .contact .container{
       background-color: var(--color-secondary);
-      width: 90%;
+      width: 50%;
       height: 100%;
       margin: 0 auto;
       position: relative;
@@ -540,6 +625,9 @@ section {
       padding-bottom: 20px;
       padding-top: 30px;
 
+  }
+  .contact .container .toppart{
+      margin-bottom: 20px;
   }
 .contact .container .toppart h2{
     float: left;
@@ -572,7 +660,7 @@ section {
 .icon{
     color: var(--color-secondary);
 }
-.content{
+.contact .content{
     text-align: left;
     margin-left: 40px;
 }
@@ -645,8 +733,12 @@ color: var(--footer-text);
 .footer .contact .contact-footer .fa{
     color: var(--color-secondary);
 }
+.footer .contact .py-4 .icons{
+    margin-left: 4px;
+}
 .footer .contact .py-4 a{
     color: var(--footer-text);
+    margin: 4px;
 }
 .footer .contact .py-4 a :hover{
     color: var(--color-primary);
@@ -682,11 +774,16 @@ color: var(--footer-text);
 }
 
 .findme .row{
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
 }
 .findme .row .col .card{
     margin-top: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 .findme .row .col .card img {
 	width: 100%;
@@ -777,23 +874,19 @@ color: var(--footer-text);
     border-top: 4px solid;
     border-radius: 10px;
 }
-.carshop .row {
-    width: 100%;
-    margin-left: 90px;
-
-}
-
-.carshop .row .col{
-    width: 25%;
-    height: auto;
-}
 
 .carshop .row{
-    margin-top: 50px;
+    /* margin-left: 30px; */
     margin-bottom: 50px;
-    width: 90%;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
 }
-
+.carshop .row .col .card{
+    margin-top: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
 .carshop .row .col .card img {
 	width: 100%;
 	height: 100%;
@@ -803,9 +896,92 @@ color: var(--footer-text);
 }
 
 .carshop .row .col .card{
-    width: 100%;
-    height: auto;
+    width: 450px;
+    height: 280px;
     border: none;
 }
 
+
+.website .toppart{
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.website .toppart h6 {
+    padding-top: 50px;
+    color: var(--color-secondary);
+    font-weight: 300;
+}
+
+.website  .toppart h2 {
+    color: var(--color-secondary);
+    font-weight: 800;
+}
+
+.website .toppart hr {
+    color: var(--color-secondary);
+    width: 60px;
+    position: relative;
+    border-top: 4px solid;
+    border-radius: 10px;
+}
+.website .content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.pingpong .toppart{
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.pingpong .toppart h6 {
+    padding-top: 50px;
+    color: var(--color-secondary);
+    font-weight: 300;
+}
+
+.pingpong  .toppart h2 {
+    color: var(--color-secondary);
+    font-weight: 800;
+}
+
+.pingpong .toppart hr {
+    color: var(--color-secondary);
+    width: 60px;
+    position: relative;
+    border-top: 4px solid;
+    border-radius: 10px;
+}
+
+.pingpong .row{
+    /* margin-left: 30px; */
+    margin-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto ;
+}
+.pingpong .row .col .card{
+    margin-top: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.pingpong .row .col .card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+}
+
+.pingpong .row .col .card{
+    width: 450px;
+    height: 280px;
+    border: none;
+}
 

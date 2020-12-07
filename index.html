@@ -22,87 +22,81 @@
         <!--Navigation bar-->
     </div>
     <section id="home">
-        <div class="container">
+        <div class="home">
             <div class="row">
-                <div class="profile">
-                    <div class="text">
-                        <h2>Raphael Aboohi</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis ea reprehenderit iure
-                            vero, nisi ratione cum soluta omnis. Culpa unde reiciendis magni nam ullam dolore. Ipsam
-                            rerum deleniti impedit? Lorem, ipsum dolor sit
-                            amet consectetur adipisicing elit. Tempora, veniam, incidunt eligendi facere mollitia harum
-                            voluptatibus molestiae adipisci nam fugiat cum dolore illo? Vel dolor animi, nostrum illo
-                            praesentium ea.
-                        </p>
-                        <a type="button" class="btn_cv"
-                            href="https://drive.google.com/file/d/1cHu5Kalv3GhAtap2CAucqE35uQqYUKv2/view?usp=sharing"
-                            target="_blank ">DOWNLOAD
-                            CV</a>
+                <div class="col text">
+                    <h2>Raphael Aboohi</h2>
+                    <p>Hello, I'm Raphael Aboohi, software developer, app developer and web developer.  
+                        I am developing in C#, Python, Dart, HTML and CSS </p>
+                    <a type="button" class="btn_cv"
+                        href="https://drive.google.com/file/d/1cHu5Kalv3GhAtap2CAucqE35uQqYUKv2/view?usp=sharing"
+                        target="_blank ">DOWNLOAD CV</a>
+
+                </div>
+                <div class="col photo">
+                    <div class="card">
+                        <img src="Photos/profile.jpg">
 
                     </div>
-                    <div class="photo">
-                        <img src="Photos/profile.jpg">
-                    </div>
                 </div>
+                <!-- <div class="photo">
+                        <img src="Photos/profile.jpg">
+                    </div> -->
             </div>
+        </div>
         </div>
     </section>
     <section id="services">
-
         <div class="services">
             <div class="headlines">
                 <h6>WHAT I DO</h6>
                 <h2>Services</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p>This is what can I do for you </p>
 
             </div>
             <br>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img
+                                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                            <h5 class="card-title">App Development</h5>
 
-            <div class="row row-no-gutters">
-                <div class="container col">
-                    <h4>App Dev</h4>
-                    <img
-                        src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae rerum ullam quisquam quas
-                        molestiae. Tempore vel in illum deserunt quisquam, eveniet, est, neque officiis cum minima nemo
-                        suscipit animi! Dolore?
-                    </p>
-                    <br>
-                    <button class="btn_read_more">Read More</button>
-
+                            <p class="card-text">I can develop apps for iOS and Android with the same code with Dart
+                                using Flutter</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="hr"></div> -->
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
 
-                <div class="container col">
-                    <h4>App Dev</h4>
-                    <img
-                        src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae rerum ullam quisquam quas
-                        molestiae. Tempore vel in illum deserunt quisquam, eveniet, est, neque officiis cum minima nemo
-                        suscipit animi! Dolore?
-                    </p>
-                    <br>
-                    <button class="btn_read_more">Read More</button>
+                            <img
+                                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                            <h5 class="card-title">Web Development</h5>
 
+                            <p class="card-text">I developed websites with HTML5, CSS and little JS</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="hr"></div> -->
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
 
-                <div class="container col">
-                    <h4>App Dev</h4>
-                    <img
-                        src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae rerum ullam quisquam quas
-                        molestiae. Tempore vel in illum deserunt quisquam, eveniet, est, neque officiis cum minima nemo
-                        suscipit animi! Dolore?
-                    </p>
-                    <br>
-                    <button class="btn_read_more">Read More</button>
+                            <img
+                                src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                            <h5 class="card-title">Software Development</h5>
 
+                            <p class="card-text">I am software developer who is specializing in object- oriented
+                                development with C# and Python.</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="hr"></div> -->
-
             </div>
+
+
 
         </div>
     </section>
@@ -114,19 +108,19 @@
                 <hr>
                 <ul class="navbar nav justify-content-center" id="nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">ALL</a>
+                        <a class="nav-link active" href="/#">ALL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PYTHON</a>
+                        <a class="nav-link" href="/#">PYTHON</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">C#</a>
+                        <a class="nav-link" href="/#">C#</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MOBILE APP</a>
+                        <a class="nav-link" href="/#">MOBILE APP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">WEB DEV</a>
+                        <a class="nav-link" href="/#">WEB DEV</a>
                     </li>
 
                 </ul>
@@ -138,7 +132,7 @@
                         <div class="info">
                             <h1>+</h1>
                             <h2>Find Me App</h2>
-                            <a href="#" class="btn-read">Read More</a>
+                            <a href="findmeapp.html" class="btn-read">View More</a>
                         </div>
                     </div>
                 </div>
@@ -148,7 +142,7 @@
                         <div class="info">
                             <h1>+</h1>
                             <h2>Whatsapp Bot</h2>
-                            <a href="#" class="btn-read">Read More</a>
+                            <a href="whatsappbot.html" class="btn-read">View More</a>
                         </div>
                     </div>
                 </div>
@@ -158,29 +152,96 @@
                         <div class="info">
                             <h1>+</h1>
                             <h2>Car Shop Program </h2>
-                            <a href="#" class="btn-read">Read More</a>
+                            <a href="carshop.html" class="btn-read">View More</a>
                         </div>
                     </div>
                 </div>
+
+
+            </div>
+            <div class="row">
                 <div class="col">
                     <div class="card">
                         <img class="card-img-top" src="Photos/MyPhotos/DSC_0140.jpg" alt="Card image cap">
                         <div class="info">
                             <h1>+</h1>
                             <h2>Raphael's Website</h2>
-                            <a href="#" class="btn-read">Read More</a>
+                            <a href="website.html" class="btn-read">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="Photos/MyPhotos/DSC_0149.jpg" alt="Card image cap">
+                        <div class="info">
+                            <h1>+</h1>
+                            <h2>Ping Pong</h2>
+                            <a href="pingpong.html" class="btn-read">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" src="Photos/MyPhotos/DSC_0149.jpg" alt="Card image cap">
+                        <div class="info">
+                            <h1>+</h1>
+                            <h2>Ping Pong</h2>
+                            <a href="website.html" class="btn-read">View More</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
 
+            </div>
 
 
         </div>
     </section>
+    <section id="certification">
+        <div class="certification">
+            <div class="headlines">
+                <h6>HOW I LEARNED</h6>
+                <h2>Certification</h2>
+                <hr>
 
-    <!--Todo: To fix the photos and add hovering-->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Flutter development bootcamp using Dart</h5>
+                            <p class="card-text">Online course completed on appbrewery.co by Dr. Angela Yu.</p>
+                            <a href="https://drive.google.com/file/d/1afIl-vaeDgs7mpMsz1TYacxoxd-PYexj/view?usp=sharing"
+                                class="btn btn-primary btn_download" target="_blank ">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">C Programming Language</h5>
+                            <p class="card-text">Online course completed on udemy.com by The Learn Programming Academy.
+                            </p>
+                            <a href="https://drive.google.com/file/d/1SQEsxWWEYj1XGxywHoW-ofZQCn4kr_Je/view?usp=sharing"
+                                class="btn btn-primary btn_download" target="_blank ">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Python Programming Language</h5>
+                            <p class="card-text">Online course completed on udemy.com by Ashutosh Pawar.</p>
+                            <a href="https://drive.google.com/file/d/10tI8jt75Gw90WnjPxeyak6qQbGU3IzJ7/view?usp=sharing"
+                                class="btn btn-primary btn_download" target="_blank ">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Todo: to fill the content here-->
+        </div>
+    </section>
     <section id="about">
         <div class="about">
             <div class="headlines">
@@ -194,12 +255,9 @@
                     <div class="profile">
                         <div class="text">
                             <h2>Hello, I'm</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis ea reprehenderit
-                                iure vero, nisi ratione cum soluta omnis. Culpa unde reiciendis magni nam ullam dolore.
-                                Ipsam rerum deleniti impedit? Lorem, ipsum dolor sit
-                                amet consectetur adipisicing elit. Tempora, veniam, incidunt eligendi facere mollitia
-                                harum voluptatibus molestiae adipisci nam fugiat cum dolore illo? Vel dolor animi,
-                                nostrum illo praesentium ea.
+                            <p>a self-starter auto-didact junior software developer specializing in object- oriented
+                                programming. Experienced in AI, ML, and Automation with Python, app development with
+                                Flutter, PC application with C# and Web development with HTML5 and CSS.
                             </p>
 
                             <div class="skill-bars">
@@ -262,10 +320,11 @@
                     <h2>Get in touch</h2>
                     <br>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat officiis possimus sint iste
-                        dignissimos modi, reprehenderit vero. Nostrum ex consequatur iure voluptatum, veniam voluptatem,
-                        placeat, maxime nesciunt corporis eligendi doloribus!</p>
+                    <br>
+                    <br>
+                    <p>If you like to get in touch with me you can use of the following methods</p>
                 </div>
+                <br>
                 <div class="content">
                     <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x icon-background"></i>
@@ -295,9 +354,7 @@
                 <h6>HIRE ME</h6>
                 <h2>Let's talk about a project</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolorem expedita doloribus sunt
-                    assumenda odit quas possimus, quae, praesentium a et rem asperiores non omnis nobis amet? Tenetur,
-                    beatae quo!</p>
+                <p>If you like to hire me full time or just for a project you can just contact me and I'll get back to you.</p>
                 <a type="button" class="btn_hire_me" href="mailto:raphael.aboohi@gmail.com"> HIRE ME</a>
             </div>
         </div>

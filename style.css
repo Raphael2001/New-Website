@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 :root {
     /* --color-primary: #8860FB; */
 
@@ -10,6 +12,7 @@
 }
 html {
     scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
 }
 button:focus,
 button:active button:hover .btn:active,
@@ -68,56 +71,65 @@ button:active button:hover .btn:active,
 
 .navbar {
     background-color: var(--color-secondary);
+    /* background-color: transparent; */
 }
-
+.home:hover + .navbar {
+    background-color: var(--color-secondary);
+}
 section {
     padding: 50px 0;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 #home {
-    padding-top: 200px;
+    padding-top: 100px;
+    margin-bottom: 0px;
+}
+.home:hover #nav-placeholder {
+    visibility: hidden;
+}
+.home {
     height: 100vh;
-    background-image: url("Photos/MyPhotos/DSC_0130.jpg");
-    object-fit: cover;
+}
+.home::after {
+    content: "";
+    background: url("Photos/MyPhotos/DSC_0152.jpg");
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: contain; */
+    background-size: cover;
     background-color: transparent;
 }
 
-.home .row {
+.home .flex {
     width: 80%;
-    text-align: center;
-    align-content: center;
+    position: relative;
     margin: 0 auto;
 }
-.home .row .text {
-    text-align: justify;
+.home .flex .text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(65%);
 }
-.home .row .text h2 {
-    font-size: 50px;
-    font-weight: 600;
-}
-.home .row .text p {
-    color: var(--text-color);
-    font-weight: 300;
-}
-
-.home .row .card .photo {
-    width: 400px;
-    height: 500px;
-    border: none;
-}
-.home .row .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    border: none;
-    margin-top: -100px;
+.highlight {
+    color: var(--color-primary);
 }
 
-.home .row .btn_cv {
+.home .flex .text h4 {
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 30pt;
+}
+
+.home .btn_cv {
     background-color: var(--color-primary);
     margin-top: 20px;
     border-radius: 30px;
@@ -128,24 +140,15 @@ section {
     width: 200px;
     height: 40px;
     padding: 8px;
+    -webkit-appearance: none;
 }
 .btn_cv:hover {
     color: var(--color-secondary);
     text-decoration: none;
 }
-
-@media screen and (min-width: 1200px) {
-    .certification .row {
-        width: 100%;
-    }
-    .services .row {
-        width: 100%;
-    }
-    .portfolio .row {
-        width: 100%;
-    }
+.services {
+    /* margin-top: -250px; */
 }
-
 .services .headlines {
     text-align: center;
 }
@@ -198,7 +201,11 @@ section {
 .services .row .col .card p {
     font-weight: 200;
 }
-
+@media screen and (max-width: 1200px) {
+    .services .row {
+        width: 100%;
+    }
+}
 .portfolio .toppart {
     background-color: var(--color-primary);
     width: 100%;
@@ -250,7 +257,7 @@ section {
 }
 
 .portfolio .row .element-item .card {
-    display: flexbox;
+    display: inline-flex;
     width: 8cm;
     height: 6cm;
     border-radius: 15px;
@@ -337,6 +344,12 @@ section {
     color: var(--color-secondary);
     text-decoration: none;
 }
+
+@media screen and (max-width: 1300px) {
+    .portfolio .row {
+        width: 100%;
+    }
+}
 .certification .headlines {
     text-align: center;
 }
@@ -378,6 +391,12 @@ section {
 .certification .row .col .card .card-body h5 {
     font-weight: 700;
 }
+@media screen and (max-width: 1300px) {
+    .certification .row {
+        width: 100%;
+    }
+}
+
 .about .headlines {
     text-align: center;
 }
@@ -398,44 +417,82 @@ section {
 .about .headlines h2 {
     font-weight: 800;
 }
-.about .row {
+
+.about .float-layout {
+    padding: 5px 5px;
+    float: right;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.about .card-container {
+    overflow: hidden;
     width: 75%;
     text-align: center;
     align-content: center;
     margin: 0 auto;
-}
-.about .row .card {
     border: none;
 }
-.about .row .photo .card {
-    height: auto;
-    width: 450px;
-    height: 500px;
-}
-.about .row .photo .card img {
+
+.about .card-container .card {
+    background-color: var(--color-secondary);
+    color: black;
+    min-height: 100%; /*replace this it in width: 100%*/
     width: 100%;
-    height: 100%;
-    /* object-fit: cover; */
-    border-radius: 10px;
-}
-.about .row .text .card {
-    text-align: justify;
-}
-.about .row .text h2 {
-    font-size: 50px;
-    font-weight: 600;
-}
-.about .row .text p {
-    color: var(--text-color);
-    font-weight: 300;
-}
-
-.about .row .card .photo {
-    width: 400px;
-    height: 500px;
+    float: left;
+    text-align: left;
     border: none;
 }
 
+.about .card-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.about .card-desc {
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+/*add this it*/
+.about .card-image {
+    display: flex;
+}
+/*-------------*/
+
+.about .card-image img {
+    width: 50%;
+    height: auto;
+    padding: 30px;
+}
+
+/* Phone Devices Query */
+@media only screen and (max-width: 1200px) {
+    .about .card-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*add this it*/
+    .about .card-image {
+        flex-direction: column;
+        width: 100%;
+    }
+    /*----------------------*/
+
+    .about .card {
+        width: 100%;
+    }
+}
+
+.about .skill-bars {
+    text-align: left;
+}
 .skill-bars .bar {
     margin: 20px 0;
 }
@@ -618,6 +675,7 @@ section {
     width: 200px;
     height: 40px;
     padding: 8px;
+    -webkit-appearance: none;
 }
 
 .hireme .toppart .btn_hire_me:hover {

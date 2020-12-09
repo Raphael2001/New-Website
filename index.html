@@ -2,45 +2,73 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-
     <link rel="stylesheet" type="text/css" href="style.css">
-
-
     <title>Raphael Aboohi</title>
+
+
 </head>
 
 <body>
-    <div id="nav-placeholder">
-        <!--Navigation bar-->
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger name" href="#home">RA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#certification">CERTIFICATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/#contact">CONTACT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active" href="/#hireme">HIRE ME</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <section id="home">
         <div class="home">
-            <div class="row">
-                <div class="col text">
-                    <h2>Raphael Aboohi</h2>
-                    <p>Hello, I'm Raphael Aboohi, software developer, app developer and web developer.
-                        I am developing in C#, Python, Dart, HTML and CSS </p>
-                    <a type="button" class="btn btn-primary btn_cv"
+            <div class="flex">
+                <div class="text">
+                    <h4>Hello, I'm <span class="highlight">Raphael Aboohi</span>.<br> I'm a software developer.</h4>
+                    <a type="button" role="button" class="btn btn-primary btn_cv"
                         href="https://drive.google.com/file/d/1cHu5Kalv3GhAtap2CAucqE35uQqYUKv2/view?usp=sharing"
                         target="_blank ">DOWNLOAD CV</a>
                 </div>
 
             </div>
+
         </div>
-        </div>
+        <div id="startchange"></div>
+
+
     </section>
     <section id="services" data-aos="zoom-in">
-        <!--todo: to put in the middle-->
         <div class="services">
             <div class="headlines">
                 <h6>WHAT I DO</h6>
@@ -94,7 +122,7 @@
 
         </div>
     </section>
-    <section id="portfolio" >
+    <section id="portfolio">
         <div class="portfolio">
             <div class="toppart">
                 <h6>MY WORKS</h6>
@@ -109,8 +137,7 @@
 
                 </div>
             </div>
-            <!--todo: to put on the middle on small screen-->
-            <div class="row grid" >
+            <div class="row grid">
                 <div class="col-lg-4 col-md-6 col-sm-12 col element-item mobile" data-aos="fade-left">
                     <div class="card">
                         <img class="card-img-top" src="Photos/projects/app.jpg" alt="Card image cap">
@@ -122,7 +149,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col element-item python" data-aos="fade-left">
-                    <div class="card" >
+                    <div class="card">
                         <img class="card-img-top" src="Photos/projects/bot.jpg" alt="Card image cap">
                         <div class="info">
                             <h1>+</h1>
@@ -161,9 +188,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
     </section>
     <section id="certification" data-aos="fade-down">
 
@@ -172,10 +198,7 @@
                 <h6>HOW I LEARNED</h6>
                 <h2>Certification</h2>
                 <hr>
-
             </div>
-            <!--todo: to put on the middle on small screen-->
-
             <div class="row">
                 <div class="col">
                     <div class="card">
@@ -220,68 +243,70 @@
                 <hr>
             </div>
             <br>
-            <!--todo: make go full screen on small screen insted half a screen-->
-            <div class="row grid">
-                <div class="text col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <h2>Hello, I'm</h2>
-                        <p>a self-starter auto-didact junior software developer specializing in object- oriented
-                            programming. Experienced in AI, ML, and Automation with Python, app development with
-                            Flutter, PC application with C# and Web development with HTML5 and CSS.
-                        </p>
-
-                        <div class="skill-bars">
-                            <div class="bar">
-                                <div class="info">
-                                    <span>WEB DEV</span>
-                                </div>
-                                <div class="progress-line webdev">
-                                    <span></span>
-                                </div>
+            <div class="card-container">
+                <div class="float-layout">
+                    <div class="card-image">
+                        <img src="Photos/profile.jpg" alt="raphael aboohi">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Hello, I'm</h2>
                             </div>
-                            <div class="bar">
-                                <div class="info">
-                                    <span>PYTHON</span>
-                                </div>
-                                <div class="progress-line python">
-                                    <span></span>
-                                </div>
+                            <div class="card-desc">
+                                <p>a self-starter auto-didact junior software developer specializing in
+                                    object-
+                                    oriented
+                                    programming. Experienced in AI, ML, and Automation with Python, app development with
+                                    Flutter, PC application with C# and Web development with HTML5 and CSS.
+                                </p>
                             </div>
-                            <div class="bar">
-                                <div class="info">
-                                    <span>C#</span>
+                            <div class="skill-bars">
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>WEB DEV</span>
+                                    </div>
+                                    <div class="progress-line webdev">
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="progress-line csharp">
-                                    <span></span>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>PYTHON</span>
+                                    </div>
+                                    <div class="progress-line python">
+                                        <span></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bar">
-                                <div class="info">
-                                    <span>MOBILE DEV</span>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>C#</span>
+                                    </div>
+                                    <div class="progress-line csharp">
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="progress-line mobile">
-                                    <span></span>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>MOBILE DEV</span>
+                                    </div>
+                                    <div class="progress-line mobile">
+                                        <span></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bar">
-                                <div class="info">
-                                    <span>C</span>
-                                </div>
-                                <div class="progress-line c">
-                                    <span></span>
+                                <div class="bar">
+                                    <div class="info">
+                                        <span>C</span>
+                                    </div>
+                                    <div class="progress-line c">
+                                        <span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="photo col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <img src="Photos/profile.jpg">
-                    </div>
-                </div>
-
             </div>
         </div>
+
     </section>
     <section id="contact">
         <div class="contact">
@@ -331,19 +356,13 @@
         </div>
     </section>
 
-    <div id="footer-placeholder">
+    <div id="footer-placeholder" data-aos="zoom-in-up">
         <!--Footer-->
     </div>
 
-    <!-- 
+    <!--  isotope js library  -->
+    <script src="/vendor/isotope/isotope.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
-     -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -352,10 +371,6 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <script type="text/javascript " src="app.js"></script>
-
-    <!--  isotope js library  -->
-    <script src="/vendor/isotope/isotope.min.js"></script>
-
 
 
 

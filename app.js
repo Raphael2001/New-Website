@@ -1,7 +1,5 @@
-AOS.init({
-    duration: 1200,
-  })
-  
+
+
 (function ($) {
     "use strict"; // Start of use strict
 
@@ -19,7 +17,7 @@ AOS.init({
     //     }
     // });
 
-  
+
     $(function () {
         $("#nav-placeholder").load("Objects/nav.html");
     });
@@ -33,7 +31,7 @@ AOS.init({
         $('.navbar-collapse').collapse('hide');
     });
 
-   
+
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
         target: '#nav',
@@ -41,6 +39,22 @@ AOS.init({
     });
 
 })(jQuery); // End of use strict
+$(document).ready(function(){       
+    var scroll_start = 0;
+    var startchange = $('#startchange');
+    var offset = startchange.offset();
+    if (startchange.length){
+        $(document).scroll(function() { 
+            scroll_start = $(document).scrollTop();
+            if(scroll_start > offset.top) {
+                $(".navbar").css('background-color', '#ffffff');
+            } else {
+                $('.navbar').css('background-color', 'transparent');
+            }
+        });
+    }
+ });
+
 
 $(document).ready(function () {
 
@@ -65,15 +79,21 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function () {
-    var scroll_pos = 0;
-    $("#mainNav").scroll(function () {
-        scroll_pos = $(this).scrollTop();
-        if (scroll_pos > 210) {
-            $("#mainNav").css('background-color', '#ffffff');
-        } else {
-            $("#mainNav").css('background-color', 'transparent');
-        }
-        console.log(scroll_pos);
-    });
-});
+$.fn.scrollNav = function (margin_top) {
+
+    event.preventDefault();
+    var
+       goTo = $(this).attr("href"),
+       addTop = margin_top | 0;
+
+    $('html, body').animate({
+        scrollTop: $(goTo).offset().top + addTop
+    }, 700);
+}
+$('.carousel').carousel({
+    interval: 2000
+  })
+
+AOS.init({
+    duration: 1200,
+})

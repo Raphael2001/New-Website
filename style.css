@@ -146,9 +146,9 @@ section {
     color: var(--color-secondary);
     text-decoration: none;
 }
-.services {
-    /* margin-top: -250px; */
-}
+/* .services {
+    margin-top: -250px;
+} */
 .services .headlines {
     text-align: center;
 }
@@ -176,7 +176,7 @@ section {
 }
 
 .services .row {
-    width: 70%;
+    width: 75%;
     text-align: center;
     align-content: center;
     margin: 0 auto;
@@ -201,7 +201,7 @@ section {
 .services .row .col .card p {
     font-weight: 200;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
     .services .row {
         width: 100%;
     }
@@ -467,7 +467,7 @@ section {
 
 .about .card-image img {
     width: 50%;
-    height: auto;
+    height: 100vh;
     padding: 30px;
 }
 
@@ -487,6 +487,9 @@ section {
 
     .about .card {
         width: 100%;
+    }
+    .about .card-container {
+        width: 90%;
     }
 }
 
